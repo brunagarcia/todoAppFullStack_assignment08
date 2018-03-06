@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: rgb(102, 163, 74);
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  color: white;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 3em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#contentList{
+  margin: 2em 1em 2em 2em;
+  padding: 0;
+}
+
+.addTask {
+  margin: 2% 2%;
+}
+
+input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+  text-decoration-color: maroon;
+  color: grey
+}
+
+label{
+  margin-left: 0.5em;
+}
+
+ul{
+  margin: 2% 0%;
+  list-style-type: none;
+}
+
+.input{
+  margin: 0;
+  padding: 1%;
+  background-color: lightseagreen;
+
+}
+
+.form{
+  align-self: center;
+  
+  height: 2em;
+}
+
+.btn-light{
+  margin-left: 1em; 
+}
+
+.btn-danger{
+  padding:0;
+}
+
+.list{
+  padding: 0%;
+  margin-left: 0%;
+}
+
+header.jumbotron {
+  border-radius: 0;
+  margin-bottom: 0em;
+  background-color: lightgrey;
+}
