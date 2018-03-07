@@ -15,8 +15,8 @@ export default class ListTodos extends Component {
       })
 
     return (
-        <div className="container" id="contentList">
-            <ul className="list">{listJSX}</ul>
+        <div className="container">
+            <ul className="list text-center">{listJSX}</ul>
             <button className="btn btn-danger" onClick={() => {
                 this.props.clearTodoFunc();
               }}>

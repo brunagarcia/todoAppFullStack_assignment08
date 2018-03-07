@@ -7,17 +7,17 @@ export default class AddTodo extends Component{
 
     return( 
       <form onSubmit={(e) => {this.props.pushTodo(e)}} 
-          className="input form-inline align-self-center">
+          className="input">
 
           <input 
               type="text" 
-              className="form-inline" 
+              className="form-control" 
               name="userInput"
-              placeholder="Type your task here:" />
+              placeholder="Type your task here and press enter!" />
 
-          <button type="submit" className="btn btn-light form-inline">
-            <i className="far fa-hand-pointer" />
-          </button>
+          {/* // <button type="submit" className="btn btn-light form-inline">
+          //   <i className="far fa-hand-pointer" />
+          // </button> */}
 
       </form>
     )

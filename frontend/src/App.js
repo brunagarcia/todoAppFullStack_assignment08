@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import NavHeader from './components/NavHeader';
 import ListTodos from './components/ListTodos';
 import AddTodo from './components/AddTodo';
-// import FilterTodos from './components/FilterTodos';
+
+import FilterTodos from './components/FilterTodos';
+import { FilterValues } from './constants' 
 import './App.css';
 
 //Parent Component!
@@ -15,6 +17,7 @@ class App extends Component {
       doneList: props.doneList,
       todosList: props.todosList,
       // filter: "all"
+      filter: FilterValues.All  //Set our intial filter to 'All'
     };
   }
 
@@ -26,7 +29,7 @@ class App extends Component {
     if(!todosList) todosList = this.props.todosList
     // if(!filter) filter = filter.ALL
     this.setState({
-
+      todosList: todosList
     })
   }
 
@@ -78,27 +81,32 @@ class App extends Component {
     });
   };
 
-  // componentDidUpdate()
+  updateFilter = (filter) => {
+    this.setState({
+      filter
+    })
 
-  // updateFilter = (filter) => {
-  //   this.setState({
-  //     filter
-  //   })
-
-  // }
+  }
 
   render() {
     return (
-      <div>
-        <NavHeader />
-        {/* <FilterTodos updateFilter={this.updateFilter} /> */}
-        <AddTodo pushTodo={this.pushTodo} />
-        <ListTodos
-          filter={this.state.todosList.complete}
-          todosList={this.state.todosList}
-          clearTodoFunc={this.clearTodoFunc}
-          markDone={this.markDone}
-        />
+      <div className="container text-center">
+          <NavHeader />
+          {/* <FilterTodos updateFilter={this.updateFilter} /> */}
+        <div className="addCenter text-justify">
+          <AddTodo pushTodo={this.pushTodo} />
+        </div>
+        <FilterTodos updateFilter={this.updateFilter}/>
+
+
+        <div className="listCenter">
+          <ListTodos
+            filter={this.state.todosList.complete}
+            todosList={this.state.todosList}
+            clearTodoFunc={this.clearTodoFunc}
+            markDone={this.markDone}
+          />
+        </div>
       </div>
     );
   }

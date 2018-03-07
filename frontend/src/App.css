@@ -29,9 +29,8 @@
   to { transform: rotate(360deg); }
 }
 
-#contentList{
-  margin: 2em 1em 2em 2em;
-  padding: 0;
+.container{
+  margin-top: 1%;
 }
 
 .addTask {
@@ -55,9 +54,8 @@ ul{
 
 .input{
   margin: 0;
-  padding: 1%;
+  padding: 2%;
   background-color: lightseagreen;
-
 }
 
 .form{
@@ -83,4 +81,10 @@ header.jumbotron {
   border-radius: 0;
   margin-bottom: 0em;
   background-color: lightgrey;
+}
+
+.seletcList{
+  margin: 0;
+  padding-bottom: 1%;
+  background-color: lightseagreen;
 }
