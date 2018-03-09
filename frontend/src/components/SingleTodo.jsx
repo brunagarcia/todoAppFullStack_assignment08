@@ -6,7 +6,7 @@ export default class SingleTodo extends Component {
     return (
       <li>  
         <input type="checkbox" checked={this.props.todo.complete} onClick={() => {
-              this.props.markDone(this.props.todo.key);
+              this.props.markDone(this.props.todo);
           }} />
         <label>
           {this.props.todo.title}

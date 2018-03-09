@@ -4,7 +4,7 @@ export default class AddTodo extends Component{
 
 
   render(){
-
+    console.log("Add Component")
     return( 
       <form onSubmit={(e) => {this.props.pushTodo(e)}} 
           className="input">
